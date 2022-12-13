@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio website of Binyamin Roberts" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script defer src="js/script.js"></script>
+
+    <title>Developer Portfolio</title>
+  </head>
+  <body class="light">
+    <header class="header">
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <a href="#"
+            ><img
+              class="logo"
+              alt="BR logo"
+              src="img/logo-bw4.png"
+            />
+          </a>
+          <li><a class="main-nav-link" href="#">Home</a></li>
+          <li><a class="main-nav-link" href="#about">About</a></li>
+          <li><a class="main-nav-link" href="#projects">Projects</a></li>
+          <li class="main-nav-link has-dropdown">
+            <a class="main-nav-link" href="#">Theme</a>
+            <ul class="dropdown">
+              <li class="dropdown-item">
+                <a id="light" href="#">Light</a>
+              </li>
+              <li class="dropdown-item">
+                <a id="dark" href="#">Dark</a>
+              </li>
+              <li class="dropdown-item">
+                <a id="solar" href="#">Solar</a>
+              </li>
+            </ul>
+          </li>
+          <li><a class="main-nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+    </header>
+    <main class="main-section">
+      <section class="section-hero">
+        <div class="hero">
+          <div class="hero-text-box">
+            <h1 class="heading-primary">
+              My name is Binyamin and I am a Developer.
+            </h1>
+            <p class="tech">HTML, CSS, JavaScript, Node.js</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-about" id="about">
+        <div class="container center-text">
+          <h2 class="heading-secondary about-title">About</h2>
+        </div>
+
+        <div class="container grid grid--2-cols">
+          <!-- <div class="hero-text-box"> -->
+            <p class="about-text">
+              My name is Binyamin and I enjoy building software. I became
+              interested in software development when I worked as an
+              echocardiographer performing diagnostic ultrasounds of adult hearts. The software used on the machines interested me, and I wanted to know how it worked under the hood. I had many questions: How is the data organized when there is so much of it? How is this data rendered so quickly when there are so many changes constantly occuring in real time? What algorithms and processes are used to handle so much data all at once. My driving curiosity led me to immerse myself in learning about how to not only understand but create such software. My self-studies in software engineering have been fruitful and I continue to learn daily as I put my skills into practice to build real world applications. Let's create together.
+            </p>
+          <!-- </div> -->
+
+          <div class="self-img-box">
+            <picture>
+              <img
+                src="/img/photo-logo.png"
+                class="self-img"
+                alt="headshot photo of dev"
+              />
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-projects" id="projects">
+        <div class="container center-text">
+          <h2 class="heading-secondary">Projects</h2>
+        </div>
+
+        <div class="container grid grid--3-cols">
+          <div class="project-card">
+            <a class="omnifood-link" href=https://food-binyamin.netlify.app/ target="_blank"><img src="img/omnifood-1.png" class="card-img" alt="Omnifood" /></a>
+            <div class="card-content">
+              <a class="omnifood-link" href=https://food-binyamin.netlify.app/ target="_blank"><p class="project-title">Omnifood Project</p></a>
+              <ul class="project-stack">
+                <li class="project-details">
+                  <ion-icon
+                    class="project-icon"
+                    id="html"
+                    name="logo-html5"
+                  ></ion-icon>
+                  <span><strong>HTML5</strong></span>
+                </li>
+                <li class="project-details">
+                  <ion-icon
+                    class="project-icon"
+                    id="css"
+                    name="logo-css3"
+                  ></ion-icon>
+                  <span><strong>CSS3</strong></span>
+                </li>
+                <li class="project-details">
+                  <a class="icon-link" href=https://github.com/BRoberts-1/Food-Service target="_blank"><ion-icon
+                    class="project-icon"
+                    id="github"
+                    name="logo-github"
+                  ></ion-icon></a>
+                  <a class="github-link" href=https://github.com/BRoberts-1/Food-Service target="_blank"><span><strong>See Github</strong></span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+         <div class="project-card">
+            <a class="forkify-link" href=https://forkify-binyamin.netlify.app/ target="_blank"><img src="img/forkify-1.png" class="card-img" alt="Omnifood" /></a>
+            <div class="card-content">
+              <a class="forkify-link" href=https://forkify-binyamin.netlify.app/ target="_blank"><p class="project-title">Forkify Project</p></a>
+              <ul class="project-stack">
+                <li class="project-details">
+                  <ion-icon
+                    class="project-icon"
+                    id="html"
+                    name="logo-html5"
+                  ></ion-icon>
+                  <span><strong>HTML5</strong></span>
+                </li>
+                <li class="project-details">
+                  <ion-icon
+                    class="project-icon"
+                    id="css"
+                    name="logo-css3"
+                  ></ion-icon>
+                  <span><strong>CSS3</strong></span>
+                </li>
+                <li class="project-details">
+                  <ion-icon
+                  class="project-icon"
+                    id="javascript"
+                    name="logo-javascript"
+                  ></ion-icon>
+                  <span><strong>JavaScript</strong></span>
+                </li>
+                <li class="project-details">
+                  <a class="icon-link" href=https://github.com/BRoberts-1/forkify target="_blank"><ion-icon
+                    class="project-icon"
+                    id="github"
+                    name="logo-github"
+                  ></ion-icon></a>
+                  <a class="github-link" href=https://github.com/BRoberts-1/forkify target="_blank"> <span><strong>See Github</strong></span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <a class="porfolio-link" href="https://bankapp-binyamin.netlify.app/" target="_blank"><img src="img/Bank-app.png" class="card-img" alt="bank-app site" /></a>
+            <div class="card-content">
+              <a class="forkify-link" href="https://bankapp-binyamin.netlify.app/" target="_blank"><p class="project-title">Bank Project</p></a>
+              <ul class="project-stack">
+                <li class="project-details">
+                  <ion-icon
+                    class="project-icon"
+                    id="html"
+                    name="logo-html5"
+                  ></ion-icon>
+                  <span><strong>HTML5</strong></span>
+                </li>
+                <li class="project-details">
+                  <ion-icon
+                    class="project-icon"
+                    id="css"
+                    name="logo-css3"
+                  ></ion-icon>
+                  <span><strong>CSS3</strong></span>
+                </li>
+                <li class="project-details">
+                  <ion-icon
+                  class="project-icon"
+                    id="javascript"
+                    name="logo-javascript"
+                  ></ion-icon>
+                  <span><strong>JavaScript</strong></span>
+                </li>
+                <li class="project-details">
+                  <a class="icon-link" href="https://github.com/BRoberts-1/Bank_App" target="_blank"><ion-icon
+                    class="project-icon"
+                    id="github"
+                    name="logo-github"
+                  ></ion-icon></a>
+                  <a class="github-link" href="https://github.com/BRoberts-1/Bank_App" target="_blank"> <span><strong>See Github</strong></span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-contact" id="contact">
+        <div class="container">
+          <div class="contact">
+            <div class="contact-text-box">
+              <h2 class="heading-secondary">Get in Touch</h2>
+              <p class="contact-text">
+               Please feel free to contact me.
+              </p>
+
+              <form class="contact-form" name="contact" method="POST" data-netlify="true">
+                <div>
+                  <label for="full-name">Full Name</label>
+                  <input
+                    id="full-name"
+                    type="text"
+                    placeholder="Your Name"
+                    name="full-name"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="email">Email address</label>
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="me@example.com"
+                    name="email"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="message">Message</label>
+                  <input
+                    id="message"
+                    type="text"
+                    placeholder="Enter Your Message"
+                    name="message "
+                    required
+                  />
+                </div>
+                <button class="btn btn--form">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container grid">
+        <p class="copyright">
+          Copyright &copy; <span class="year">2022</span> by Binyamin Roberts.
+          All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>

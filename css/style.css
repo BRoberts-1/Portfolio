@@ -1,0 +1,385 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  height: 2.4rem;
+}
+
+.heading-primary {
+  padding-top: 30rem;
+}
+
+.main-nav {
+  height: 7rem;
+  width: 100%;
+  background: var(--bg-nav);
+  color: var(--text);
+}
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  background: var(--bg-nav);
+  color: white;
+  margin: none;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--gray0);
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: white;
+}
+
+/* Drop-down menu for themes */
+
+.dropdown {
+  position: absolute;
+  width: 500px;
+  opacity: 0;
+  z-index: 2;
+  background: #555;
+  border-top: 0.2rem solid white;
+
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 3rem;
+  margin-top: 2rem;
+  padding: 0.5rem;
+
+  box-shadow: rgba(2, 8, 20, 0.1) 0px 0.175em 0.5em;
+
+  transition: opacity 0.15s ease-out;
+}
+
+.has-dropdown:focus-within .dropdown {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.dropdown-item a {
+  width: 100%;
+  height: 100%;
+  size: 0.7rem;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+/* Target Pseudo element 'before' our link 'a' to create a Circle using an empty string '' -nice hack */
+
+.dropdown-item a::before {
+  content: " ";
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1rem;
+  /* margin-right: 10px; */
+}
+
+:root {
+  --gray0: rgba(248, 248, 248, 0.685);
+  --gray1: rgba(219, 225, 232, 0.712);
+  --gray2: rgba(178, 190, 205, 0.616);
+  --gray3: rgba(108, 121, 131, 0.979);
+  --gray4: rgba(69, 78, 86, 0.815);
+  --gray5: rgba(42, 46, 53, 0.808);
+  --gray6: rgba(18, 24, 27, 0.582);
+  --blue: #0084a5;
+  --purple: #a82dd1;
+  --yellow: #fff565;
+}
+
+.light {
+  --bg: var(--gray0);
+  --bg-nav: linear-gradient(to right, var(--gray1), var(--gray3));
+  --bg-dropdown: var(--gray0);
+  --text: var(--gray6);
+  --border-color: var(--blue);
+  --bg-solar: var(--yellow);
+}
+
+.dark {
+  --bg: var(--gray5);
+  --bg-nav: linear-gradient(to right, var(--gray5), var(--gray6));
+  --bg-dropdown: var(--gray6);
+  --text: var(--gray0);
+  --border-color: var(--purple);
+  --bg-solar: var(--blue);
+}
+
+.solar {
+  --gray0: rgba(251, 255, 212, 0.836);
+  --gray1: rgba(247, 248, 208, 0.795);
+  --gray2: rgba(182, 248, 128, 0.829);
+  --gray3: rgba(94, 199, 45, 0.808);
+  --gray4: rgba(62, 165, 101, 0.788);
+  --gray5: rgba(0, 82, 102, 0.849);
+  --gray6: rgba(0, 61, 76, 0.856);
+}
+
+#dark::before {
+  background: #2a2e35;
+}
+
+#light::before {
+  background: #ffffff;
+}
+
+#solar::before {
+  background: var(--bg-solar);
+}
+
+/* Sticky navigation */
+
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 6rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.06);
+}
+
+.sticky .section-hero {
+  margin-top: 9.6rem;
+}
+
+/* Main Section */
+
+.section-hero {
+  padding: 1rem;
+  height: 90vh;
+  background-image: var(--bg-nav), url(/img/laptop.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  margin-bottom: 20rem;
+  text-align: center;
+  clip-path: polygon(50% 0, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
+}
+
+.about-text {
+  color: rgba(18, 24, 27, 0.678);
+}
+.tech {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+/* About section */
+
+.section-about {
+  max-width: 130rem;
+  margin: 0 auto;
+  display: grid;
+  margin-bottom: 20rem;
+}
+
+/* .about-title {
+  position: relative;
+  top: 10rem;
+  left: 55rem;
+} */
+
+.about-text {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 5rem;
+  padding-top: 1rem;
+  /* justify-content: left; */
+}
+
+.self-img {
+  max-width: 65%;
+  height: auto;
+  display: grid;
+  /* padding-left: 10rem;
+  padding-top: 28rem; */
+}
+
+/* Project Section */
+
+.section-projects {
+  padding: 4.5rem 0;
+  margin-bottom: 10rem;
+}
+.card-img {
+  width: 100%;
+}
+
+.card-content {
+  padding: 4.8rem 4.8rem 4.8rem 6rem;
+}
+
+.project-card {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 11px;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+.project-card:hover {
+  transform: translateY(-1.2rem);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+}
+
+.project-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.project-stack {
+  color: rgba(18, 24, 27, 0.678);
+}
+
+.project-title {
+  rgba(18, 24, 27, 0.678);
+}
+#html {
+  color: #e34c26;
+}
+
+#css {
+  color: #264de4;
+}
+
+#github {
+  color: #171515;
+}
+
+#javascript {
+  color: #f0db4f;
+}
+.project-title {
+  font-size: 2.4rem;
+  color: inherit;
+  font-weight: 600;
+  margin-bottom: 6rem;
+  text-decoration: underline;
+}
+
+.project-stack {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.project-details {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+/* Contact Section */
+
+.section-contact {
+  padding: 4.8rem 0 12.8rem;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  border-radius: 11px;
+
+  background-image: linear-gradient(to right bottom, var(--gray1), var(--gray3));
+  overflow: hidden;
+}
+
+.contact-text-box {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  color: var(--gray5);
+}
+
+.contact .heading-secondary {
+  color: inherit;
+  margin-bottom: 3.2rem;
+}
+
+.contact-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr ;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.contact-form input,
+.contact-form select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  background-color: #fff;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input::placeholder {
+  color: #aaa;
+}
+
+.contact *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
+
+.btn--form {
+  background-color: var(--gray1);
+  color: var(--gray6);
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: var(--gray6);
+  color: var(--gray0);
+}
+.copyright {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #767676;
+  margin-top: auto;
+  padding-bottom: 3rem;
+}
