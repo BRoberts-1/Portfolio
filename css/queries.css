@@ -137,6 +137,14 @@
     padding: 2.4rem 0 6.4rem 0;
   }
 
+  .heading-primary {
+    font-size: 3.8rem;
+  }
+
+  .tech {
+    font-size: 1.5rem;
+  }
+
   .hero {
     padding: 0 3.2rem;
   }
