@@ -27,7 +27,7 @@
   justify-content: space-evenly;
   height: 100%;
   background: var(--bg-nav);
-  color: white;
+  color: black;
   margin: none;
 }
 
@@ -121,7 +121,7 @@
 }
 
 .dark {
-  --bg: var(--gray5);
+  --bg: var(--gray6);
   --bg-nav: linear-gradient(to right, var(--gray5), var(--gray6));
   --bg-dropdown: var(--gray6);
   --text: var(--gray0);
