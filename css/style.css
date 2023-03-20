@@ -275,6 +275,10 @@
 #javascript {
   color: #f0db4f;
 }
+
+#react {
+  color: #61dbfb
+}
 .project-title {
   font-size: 2.4rem;
   color: inherit;
